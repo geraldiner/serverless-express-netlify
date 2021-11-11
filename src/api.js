@@ -21,7 +21,8 @@ router.get("/", (req, res) => {
 });
 router.get("/games", async (req, res) => {
 	try {
-		const games = await Game.find().lean();
+		const games = await Game.find();
+		console.log(games);
 		res.status(200).json({
 			success: true,
 			data: games,

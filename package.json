@@ -4,15 +4,27 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "netlify-lambda serve src",
-    "build": "netlify-lambda build src"
+    "watch": "onchange ./src/**/*.js -- npm run bundle",
+    "bundle": "cpx src/**/* functions/",
+    "build": "cd functions && npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/geraldiner/serverless-express-netlify.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/geraldiner/serverless-express-netlify/issues"
+  },
+  "homepage": "https://github.com/geraldiner/serverless-express-netlify#readme",
   "dependencies": {
+    "cpx": "^1.5.0",
+    "dotenv": "^10.0.0",
     "express": "^4.17.1",
-    "netlify-lambda": "^2.0.15",
+    "mongoose": "^6.0.12",
+    "onchange": "^7.1.0",
     "serverless-http": "^2.7.0"
   }
 }

@@ -1,0 +1,12 @@
+{
+  "name": "functions",
+  "version": "1.0.0",
+  "description": "",
+  "main": "api.js",
+  "scripts": {
+    "build": "npm install"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
